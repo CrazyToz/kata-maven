@@ -1,10 +1,15 @@
+# Objectif
+
+Définir une architecture **n-tier** où le projet sera décomposé en trois couches : 
+* core **(jar)**
+* dao **(jar)**
+* webapp **(war)**
+
+En terme de dépendances, **webapp** dépend de **core** qui dépend lui de **dao**.
+
 # TODO
 
-1. Générer un nouveau projet avec l'invité de commande
-2. Décrivez le projet, en utilisant les balises :
-	* name, description
-	* properties (créer une property pour la version de jUnit)
-3. Dans l'ordre, effectuer : 
-	a. la compilation du projet
-	b. le lancement des tests du projet
-	c. le packaging du projet
+1. Transformer le pom existant en pom dit **parent**
+2. Créer 3 **sous-modules**, chacun correspondant à une couche de l'architecture applicative.
+3. Packager le projet parent, les enfants doivent être buildés en même temps.
+4. Centraliser la gestion des dépendances existantes
