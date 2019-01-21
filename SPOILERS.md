@@ -33,7 +33,28 @@ Un fichier **web.xml** doit être présent, en général dans le dossier **/srv/
 </web-app>
 ```
 
+## Filtrer une resource
+
+```xml
+<project>
+  ...
+  <build>
+    ...
+    <resources>
+      <resource>
+        <directory>src/main/resources-filtered</directory>
+        <filtering>true</filtering>
+      </resource>
+      ...
+    </resources>
+    ...
+  </build>
+  ...
+</project>
+```
+
 # Ressources
 
 [Maven Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
+[Maven resources](https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html)
 
